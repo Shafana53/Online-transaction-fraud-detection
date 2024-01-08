@@ -33,7 +33,7 @@ def detect_fraud(request):
         new_transaction = Transaction.objects.create(**transaction_data)
 
         # Load the pre-trained  model
-        model = joblib.load(r'A:\Minor\fraud_model.pkl')
+        model = joblib.load(r'fraud_model.pkl')
 
         # Apply label encoding to the 'type' feature
         label_encoder = LabelEncoder()

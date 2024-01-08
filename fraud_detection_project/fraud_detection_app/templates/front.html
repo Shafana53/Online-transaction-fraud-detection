@@ -1,0 +1,141 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Online Fraud Detection</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        .img{
+        background: url('../static/fraud_detection_app/images/Laptop.jpg') no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        }
+        .img::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        }
+        .center{
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        }
+        .center .title{
+        color: #fff;
+        font-size: 45px;
+        text-shadow: 0 1px 4px #980f86;
+        font-weight: 600;
+        }
+        .center .sub_title{
+        color: #fff;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+        font-size: 25px;
+        font-weight: 600;
+        }
+        .center .btns{
+        margin-top: 20px;
+        }
+        .center .btns button{
+        height: 55px;
+        width: 170px;
+        border-radius: 5px;
+        border: none;
+        margin: 0 10px;
+        border: 2px solid white;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0 10px;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+        }
+
+        a,
+        a:link {
+            color:inherit;
+        font-family: inherit;
+        text-decoration: none;
+        }
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:unactive {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    </style>
+</head>
+<body>
+
+    <div class="img"></div>
+    <div class="center">
+      <div class="title">Online Payment Fraud Detection</div>
+      <div class="sub_title">To Detect Your Transaction Is Fraudulent Or Not.</div>
+      <div class="btns">
+        <button class="glow-on-hover"><a href="{% url 'index' %}">Click Here</a></button>
+      </div>
+    </div>
+  </body>
+</html> 
+

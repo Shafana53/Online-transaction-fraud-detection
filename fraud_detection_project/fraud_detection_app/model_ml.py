@@ -10,8 +10,8 @@ import joblib
 # Load the dataset
 # transactions = Transaction.objects.all()
 # df = pd.DataFrame.from_records(Transaction.objects.values())
-dataset_path = r'C:\Users\AaRu\fraud_detection_project\fraud_detection_app\transaction_data.csv.csv'
-df = pd.read_csv(r'C:\Users\AaRu\fraud_detection_project\fraud_detection_app\transaction_data.csv.csv')
+dataset_path = r'transactions_data.csv'
+df = pd.read_csv(r'transactions_data.csv')
 
 # Drop unnecessary columns (adjust as needed)
 df = df.drop(['nameOrig', 'nameDest', 'step'], axis=1)
@@ -49,5 +49,5 @@ print('Classification Report:\n', classification_report_result)
 
 
 # Save the trained model
-model_save_path = r'A:\Minor\fraud_model.pkl'
+model_save_path = r'fraud_model.pkl'
 joblib.dump(dt_model, model_save_path)

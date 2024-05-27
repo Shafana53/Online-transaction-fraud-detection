@@ -7,7 +7,6 @@ import pandas as pd
 import joblib
 def home(request):
     return render(request,'front.html')
-
 def front(request):
     return redirect(request, 'index.html')
 def detect_fraud(request):
